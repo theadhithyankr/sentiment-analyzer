@@ -1,81 +1,28 @@
-# 📝 Sentiment Analysis Web App
+# Sentiment Analyzer
 
-A Flask-based web application that analyzes text sentiment using **Naïve Bayes** and **Support Vector Machine (SVM)** models. It features a **dynamic pH-like sentiment scale** to visualize the positivity, neutrality, or negativity of the input text.
+Sentiment analysis web app using SVM, Naive Bayes, Flask, HTML, CSS, and JavaScript.
 
----
+## Key Features
+- Sentiment analysis web app using SVM, Naive Bayes, Flask, HTML, CSS, and JavaScript
+- Backend/runtime files are documented alongside the frontend or app layer when the repository includes them.
 
-## 🚀 Features
-- 📊 **Sentiment Analysis** using Naïve Bayes & SVM
-- 🎨 **Dynamic Sentiment Scale** (Negative → Mixed → Neutral → Positive)
-- ⚡ **Fast Processing** with real-time predictions
-- 🔧 **Pre-trained Models** for accurate results
+## Tech Stack
+- Python
+- Flask
 
----
+## Project Structure
+- Key files: app.py, models/nb_model.pkl, models/svm_model.pkl, models/vectorizer.pkl.
 
-## 📂 Project Structure
-```
-💃 SENTIMENTAL_ANALYSIS
-│── 📃 models
-│   ├── nb_model.pkl
-│   ├── svm_model.pkl
-│   └── vectorizer.pkl
-│── 📃 static
-│   └── style.css
-│── 📃 templates
-│   └── index.html
-│── app.py
-│── README.md
-│── LICENSE
-```
-
----
-
-## 🛠️ Setup Instructions
-
-### 1⃣ Clone the Repository
+## Setup and Run
 ```bash
-git clone https://github.com/YOUR-USERNAME/sentiment-analysis.git
-cd sentiment-analysis
+git clone https://github.com/theadhithyankr/sentiment-analyzer.git
+cd sentiment-analyzer
+# Open the source files in your preferred editor and run with the matching local toolchain.
 ```
 
-### 2⃣ Create & Activate Virtual Environment
-```bash
-python -m venv venv
-# Activate (Windows)
-venv\Scripts\activate
-# Activate (Mac/Linux)
-source venv/bin/activate
-```
+## What This Project Demonstrates
+- Connecting application interfaces to Python services, ML workflows, or backend APIs.
+- Presenting project scope, setup, and technical choices clearly for reviewers and recruiters.
 
-### 3⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4⃣ Run the Application
-```bash
-python app.py
-```
-Access it at: **`http://127.0.0.1:5000/`**
-
----
-
-## 🗄 Demo
-![Sentiment Scale Example](https://your-image-link.com/demo.png)  
-*Example of the sentiment scale transitioning from red (negative) to green (positive).*
-
----
-
-## 💜 License
-This project is licensed under the **MIT License** – see the [`LICENSE`](LICENSE) file for details.
-
----
-
-## ⭐ Contributing
-Feel free to fork and improve the project! PRs are welcome. 😊
-
----
-
-## 👨‍💻 Author
- [GitHub Profile](https://github.com/theadhithyankr)
-
+## Repository
+- GitHub: https://github.com/theadhithyankr/sentiment-analyzer
