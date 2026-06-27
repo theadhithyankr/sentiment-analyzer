@@ -29,7 +29,7 @@ The README was written from the repository contents, including its manifest file
 
 ## Project Structure
 
-`	ext
+```text
 .
 |-- app.py
 |-- LICENSE
@@ -39,13 +39,13 @@ The README was written from the repository contents, including its manifest file
 |-- README.md
 |-- static/style.css
 |-- templates/index.html
-`
+```
 
 ## Setup
 
-`ash
+```bash
 Review the source files in this repository and run them with the matching local toolchain.
-`
+```
 
 ## What This Project Demonstrates
 
