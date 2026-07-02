@@ -1,13 +1,17 @@
 from flask import Flask, render_template, request
 import joblib
 import time
+from pathlib import Path
 
 app = Flask(__name__)
 
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "models"
+
 # Load trained models and vectorizer
-vectorizer = joblib.load("models/vectorizer.pkl")
-nb_model = joblib.load("models/nb_model.pkl")
-svm_model = joblib.load("models/svm_model.pkl")
+vectorizer = joblib.load(MODEL_DIR / "vectorizer.pkl")
+nb_model = joblib.load(MODEL_DIR / "nb_model.pkl")
+svm_model = joblib.load(MODEL_DIR / "svm_model.pkl")
 
 # Sentiment score mapping (0 = Negative, 50 = Neutral, 100 = Positive)
 sentiment_mapping = {
@@ -20,7 +24,10 @@ sentiment_mapping = {
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        user_input = request.form["text"]
+        user_input = request.form.get("text", "").strip()
+        if not user_input:
+            return render_template("index.html", user_input="")
+
         X_input = vectorizer.transform([user_input])
 
         # Measure processing time
